@@ -1,0 +1,42 @@
+﻿<!-- Claire Gray & Kelsey Gonzales
+//CS4354
+//Homework 5
+//May 13, 2016-->
+
+@using TTUHousing.ViewModels
+@model IEnumerable<InspectionData>
+@{
+    ViewBag.Title = "Query6";
+}
+
+<h2>Inspection Detail</h2>
+
+<div class="container">
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <td>Inspection Number</td>
+                <td>Inspection Date</td>
+                <td>Satisfactory Condition</td>
+                <td>Comments</td>
+                <td>Flat Number</td>
+                <td>Staff Number</td>
+
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var InspectionData in Model)
+            {
+                <tr>
+                    <td>@InspectionData.inspectionNo</td>
+                    <td>@InspectionData.inspectionDate.ToLongDateString()</td>
+                    <td>@InspectionData.satisfactory</td>
+                    <td>@InspectionData.comments</td>
+                    <td>@InspectionData.flatNo</td>
+                    <td>@InspectionData.staffNo</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+

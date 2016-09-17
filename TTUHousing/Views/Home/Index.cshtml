@@ -1,0 +1,26 @@
+﻿<!-- Claire Gray & Kelsey Gonzales
+//CS4354
+//Homework 5
+//May 13, 2016-->
+
+@{
+    ViewBag.Title = "Home Page";
+}
+
+<div class="container">
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            Queries
+        </div>
+        <div class="panel-body">
+            <div class="list-group">
+                @Html.ActionLink("Total number of student for each category.", "Query9", null, new { @class = "list-group-item" })
+                @Html.ActionLink("Staff Detail who are over 60 years old today.", "Query14", null, new { @class = "list-group-item" })
+                @Html.ActionLink("Total number of registered vehicle in a particular parking Lot.", "Query15", null, new { @class = "list-group-item" })
+                @Html.ActionLink("Details of apartment inspections where the property was found to be in an unsatisfactory condition.", "Query6", null, new { @class = "list-group-item" })
+                @Html.ActionLink("Details of lease agreements.", "Query3", null, new { @class = "list-group-item" })
+
+            </div>
+        </div>
+    </div>
+</div>

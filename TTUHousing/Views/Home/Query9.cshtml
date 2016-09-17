@@ -1,0 +1,33 @@
+﻿<!-- Claire Gray & Kelsey Gonzales
+//CS4354
+//Homework 5
+//May 13, 2016-->
+
+@using TTUHousing.ViewModels
+@model IEnumerable<StudentGroup>
+
+@{
+    ViewBag.Title = "Query9";
+}
+
+<h2>Student Group</h2>
+
+<div class="container">
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <td>Level Name</td>
+                <td>Student Count</td>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var StudentGroup in Model)
+            {
+                <tr>
+                    <td>@StudentGroup.levelName</td>
+                    <td>@StudentGroup.studentCount</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

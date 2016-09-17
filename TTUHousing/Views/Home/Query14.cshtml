@@ -1,0 +1,36 @@
+﻿<!-- Claire Gray & Kelsey Gonzales
+//CS4354
+//Homework 5
+//May 13, 2016-->
+
+@using TTUHousing.ViewModels
+@model IEnumerable<OldStaff>
+@{
+    ViewBag.Title = "Query14";
+}
+
+<h2>Old Staff</h2>
+
+<div class="container">
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <td>Staff No.</td>
+                <td>Name</td>
+                <td>Age</td>
+                <td>Location</td>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var OldStaff in Model)
+            {
+                <tr>
+                    <td>@OldStaff.StaffNumber</td>
+                    <td>@OldStaff.Name</td>
+                    <td>@OldStaff.Age</td>
+                    <td>@OldStaff.Location</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

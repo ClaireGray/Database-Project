@@ -1,0 +1,31 @@
+﻿<!-- Claire Gray & Kelsey Gonzales
+//CS4354
+//Homework 5
+//May 13, 2016-->
+
+@{
+    ViewBag.Title = "Query15";
+}
+
+<h2>Total number of Vehicle</h2>
+
+<div class="container">
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <td>parking Lot </td>
+                <td>Total # of Vehicle</td>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var VehicleGroup in Model)
+            {
+                <tr>
+                    <td>@VehicleGroup.parkingID</td>
+                    <td>@VehicleGroup.vehicleCount</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+

@@ -1,0 +1,41 @@
+﻿<!-- Claire Gray & Kelsey Gonzales
+//CS4354
+//Homework 5
+//May 13, 2016-->
+
+@using TTUHousing.ViewModels
+@model IEnumerable<LeaseDetail>
+@{
+    ViewBag.Title = "Query3";
+}
+
+<h2>Lease Agreement Detail</h2>
+
+<div class="container">
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <td>Lease ID</td>
+                <td># of Semester</td>
+                <td>Move In Date</td>
+                <td>Move Out Date</td>
+                <td>Move Place ID</td>
+                <td>Banner Number</td>
+
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var LeaseDetail in Model)
+            {
+                <tr>
+                    <td>@LeaseDetail.leaseID</td>
+                    <td>@LeaseDetail.numOfSemester</td>
+                    <td>@LeaseDetail.moveInDate.ToLongDateString()</td>
+                    <td>@LeaseDetail.moveOutDate.ToLongDateString()</td>
+                    <td>@LeaseDetail.placeID</td>
+                    <td>@LeaseDetail.bannerNumber</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
